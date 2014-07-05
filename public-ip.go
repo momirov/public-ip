@@ -37,5 +37,6 @@ func handlerText(w http.ResponseWriter, r *http.Request) {
 }
 
 func handlerJson(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-type", "application/json")
 	fmt.Fprintf(w, "{ \"ip\": \"%s\" }", GetRemoteAddr(r))
 }
