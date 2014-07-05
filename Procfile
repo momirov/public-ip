@@ -1,1 +1,1 @@
-web: public-ip -port=$PORT
+web: public-ip
