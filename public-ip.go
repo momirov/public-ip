@@ -25,7 +25,7 @@ func GetPort() string {
 }
 
 func GetRemoteAddr(r *http.Request) string {
-	ip := r.Header.Get("HTTP_X_FORWARDED_FOR")
+	ip := r.Header.Get("X-Forwarded-For")
 	if len(ip) == 0 || strings.EqualFold("unknown", ip) {
 		ip = strings.Split(r.RemoteAddr, ":")[0]
 	}
