@@ -1,0 +1,5 @@
+{
+	"ImportPath": "github.com/momirov/public-ip",
+	"GoVersion": "go1.3",
+	"Deps": []
+}
