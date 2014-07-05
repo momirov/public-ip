@@ -24,12 +24,16 @@ func GetPort() string {
 	return ":" + port
 }
 
-func handlerText(w http.ResponseWriter, r *http.Request) {
+func GetRemoteAddr(r *http.Request) string {
 	ip := strings.Split(r.RemoteAddr,":")[0]
-	fmt.Fprintf(w, ip)
+
+	return ip
+}
+
+func handlerText(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, GetRemoteAddr(r))
 }
 
 func handlerJson(w http.ResponseWriter, r *http.Request) {
-	ip := strings.Split(r.RemoteAddr,":")[0]
-	fmt.Fprintf(w, "{ \"ip\": \"%s\" }" ,ip)
+	fmt.Fprintf(w, "{ \"ip\": \"%s\" }", GetRemoteAddr(r))
 }
