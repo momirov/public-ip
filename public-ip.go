@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"strings"
 	"os"
+	"strings"
 )
 
 func main() {
@@ -27,7 +27,7 @@ func GetPort() string {
 func GetRemoteAddr(r *http.Request) string {
 	ip := r.Header.Get("HTTP_X_FORWARDED_FOR")
 	if len(ip) == 0 || strings.EqualFold("unknown", ip) {
-		ip = strings.Split(r.RemoteAddr,":")[0]
+		ip = strings.Split(r.RemoteAddr, ":")[0]
 	}
 	return ip
 }
