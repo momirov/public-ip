@@ -3,7 +3,7 @@ public-ip
 
 Return public ip via api, written in Go. I use it to display my public ip address in tmux status bar.
 
-Hosted on Heroku and accesible via [http://io.vladimirm.com/](http://io.vladimirm.com/)
+Hosted on Heroku and accesible via [http://ip.vladimirm.com/](http://ip.vladimirm.com/)
 
 Response types:
 
